@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
+@Entity(name = "_user")
 public class User {
     @Id
     @GeneratedValue
@@ -24,6 +24,7 @@ public class User {
     
     private Integer age;
     private String email;
+    private String password;
 
     @Column(columnDefinition = "nvarchar(255)")
     private String address;
