@@ -15,6 +15,8 @@ public class UserDTO {
     private Integer age;
     private String email;
     private String address;
+    private Double latitude;
+    private Double longitude;
 
     public static UserDTO fromUser(User user) {
         return UserDTO.builder()
@@ -23,6 +25,8 @@ public class UserDTO {
                 .age(user.getAge())
                 .email(user.getEmail())
                 .address(user.getAddress())
+                .latitude(user.getLatitude())
+                .longitude(user.getLongitude())
                 .build();
     }
 }
